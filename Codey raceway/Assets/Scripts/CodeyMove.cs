@@ -12,6 +12,7 @@ public class CodeyMove : MonoBehaviour
     private Rigidbody rb;
     void Start()
     {
+    
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
