@@ -6,6 +6,7 @@ TagManager:
   tags:
   - APlayer
   - Checkpoint
+  - itemBoxes
   layers:
   - Default
   - TransparentFX
