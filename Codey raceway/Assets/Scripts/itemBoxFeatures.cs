@@ -5,9 +5,11 @@ using UnityEngine;
 public class itemBoxFeatures : MonoBehaviour
 {
     // Start is called before the first frame update
+
     void Start()
     {
-        transform.Rotate(Vector3.forward, Time.deltaTime * 30f);
+
+      
 
     }
 
@@ -15,5 +17,19 @@ public class itemBoxFeatures : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if(collider.tag == "Player")
+        {
+            gameObject.SetActive(false);
+        }
+    }
+
+
+    private void itemBoxRespawn()
+    {
+        gameObject.SetActive(true);
     }
 }

@@ -27,4 +27,13 @@ public class itemBoxSpawner : MonoBehaviour
     {
         
     }
+
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if (collider.tag == "Player")
+        {
+            Destroy(collider.gameObject);
+        }
+    }
 }
