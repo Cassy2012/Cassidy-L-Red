@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class itemBoxFeatures : MonoBehaviour
 {
+
     // Start is called before the first frame update
 
     void Start()
@@ -17,6 +18,7 @@ public class itemBoxFeatures : MonoBehaviour
     void Update()
     {
         
+      
     }
 
     private void OnTriggerEnter(Collider collider)
@@ -24,12 +26,16 @@ public class itemBoxFeatures : MonoBehaviour
         if(collider.tag == "Player")
         {
             gameObject.SetActive(false);
+
+            Invoke("itemBoxRespawn", 2.0f);
         }
     }
 
 
     private void itemBoxRespawn()
     {
+        
         gameObject.SetActive(true);
+
     }
 }
