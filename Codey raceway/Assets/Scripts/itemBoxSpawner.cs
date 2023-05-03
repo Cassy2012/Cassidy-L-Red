@@ -17,7 +17,7 @@ public class itemBoxSpawner : MonoBehaviour
         for (int i = 1; i < numberOfBoxes; i++)
         {
             GameObject itemBoxClone = Instantiate(itemBox, new Vector3(transform.position.x + modifyXPosition * i, transform.position.y, transform.position.z + modifyZPosition * i), transform.rotation);
-
+            
                 
         }
     }

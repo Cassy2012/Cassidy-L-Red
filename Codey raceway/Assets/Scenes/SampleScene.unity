@@ -3489,7 +3489,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784301270}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -172.68077, y: 14.358772, z: 39.835316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -5191,7 +5191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemBox: {fileID: 784301270}
-  numberOfBoxes: 4
+  numberOfBoxes: -4
   modifyXPosition: 3
   modifyZPosition: 0
 --- !u!114 &1243368913
@@ -5206,7 +5206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42be655275542c24b86c65ae4df79649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerupList: []
+  powerupList:
+  - {fileID: 4729981778706117101, guid: f007d8d9fe478aa40afeb9d8a956dc14, type: 3}
+  - {fileID: 6751954295594579549, guid: 35b3d10f0915b12449c02cde51779b6c, type: 3}
+  randomNumberInList: 1
+  chosenPowerup: {fileID: 6751954295594579549, guid: 35b3d10f0915b12449c02cde51779b6c, type: 3}
+  canSpawn: 1
+  modifyXPosition: 0
+  modifyZPosition: 0
 --- !u!4 &1284272577 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5175279fb16e48044b7fde28997771c6, type: 3}

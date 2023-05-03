@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 733122440130876206}
   - component: {fileID: 5781419458932112172}
   m_Layer: 0
-  m_Name: NavMeahShell
+  m_Name: NavMeshShell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
