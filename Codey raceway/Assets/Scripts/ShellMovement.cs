@@ -16,9 +16,9 @@ public class ShellMovement : MonoBehaviour
         transform.position += transform.forward * Time.deltaTime * 50;
     }
 
-    private void OnTriggerEnter(Collision collider)
+    private void OnTriggerEnter(Collider collider)
     {
-        if(collider.gameObject.tag == "Objects")
+        if(collider.tag == "Objects")
         {
             Destroy(collider.gameObject);
         }
