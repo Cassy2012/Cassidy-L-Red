@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectsDestroy : MonoBehaviour
+public class DissappearDestroy : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,17 +13,15 @@ public class ObjectsDestroy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //transform.position += transform.forward * Time.deltaTime * 5;
     }
 
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisionEnter(Collision other)
     {
-        if(collider.tag == "Shell" )
+        if(other.gameObject.tag == "Player")
         {
-            Destroy(collider.gameObject);
-            Destroy(gameObject);
-
+            Destroy(other.gameObject);
         }
     }
 }

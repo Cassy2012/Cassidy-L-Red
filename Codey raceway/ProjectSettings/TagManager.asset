@@ -9,6 +9,7 @@ TagManager:
   - itemBoxes
   - Objects
   - Shell
+  - testNav
   layers:
   - Default
   - TransparentFX
