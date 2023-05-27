@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class NavMeshMovement : MonoBehaviour
 {
     public Transform goal ;
+    private GameObject[] targets;
 
     Animator animator;
 
@@ -18,8 +19,18 @@ public class NavMeshMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
 
         GetComponent<NavMeshAgent>().SetDestination(goal.transform.position);
-        goal = GameObject.FindGameObjectWithTag("Objects").transform;
-            ;
+        targets = GameObject.FindGameObjectsWithTag("Objects");
+
+        goal = GameObject.FindGameObjectWithTag("Objects").transform; 
+        foreach(GameObject target in targets)
+        {
+            if (Vector3.Distance(target.transform.position, transform.position) < Vector3.Distance(goal.position, transform.position))
+            {
+                goal = target.transform;
+            }
+        }
+
+        
         
 
         Agent.destination = goal.transform.position;

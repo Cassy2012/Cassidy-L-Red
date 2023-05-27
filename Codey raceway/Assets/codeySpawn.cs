@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShellMovement : MonoBehaviour
+public class codeySpawn : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -13,17 +13,15 @@ public class ShellMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.forward * Time.deltaTime * 50;
+        
     }
 
-    private void OnTriggerEnter(Collider collider)
+    private void OnCollisonEnter (Collision collision)
     {
-        if(collider.tag == "Objects")
+        if(collision.gameObject.tag == "Terrain")
         {
-            Destroy(collider.gameObject);
+            Destroy(gameObject);
         }
     }
+
 }
-
-
-
