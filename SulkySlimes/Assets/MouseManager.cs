@@ -10,13 +10,18 @@ public class MouseManager : MonoBehaviour
     [Header("Physics")]
     public Vector3 launchVector;
     public float launchForce;
+    public float xForce;
+    public float yForce;
 
     [Header("Slime")]
     public Transform slimeTransform;
     public Rigidbody slimeRigidbody;
 
-    
 
+    private void Start()
+    {
+        //slimeRigidbody = GetComponent<Rigidbody>();
+    }
 
     // Update is called once per frame
 
@@ -25,6 +30,7 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             clickStartLocation = Input.mousePosition;
+
         }
 
 
@@ -41,7 +47,11 @@ public class MouseManager : MonoBehaviour
 
 
         if (Input.GetMouseButtonUp(0))
-        {
+        {   
+            slimeRigidbody.isKinematic = false;
+            launchVector = new Vector2(yForce,xForce);
+            slimeRigidbody.AddForce(launchVector);
+
             print("Release");
         }
     }
