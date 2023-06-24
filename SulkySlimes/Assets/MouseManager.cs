@@ -8,6 +8,8 @@ public class MouseManager : MonoBehaviour
     public Vector3 clickStartLocation;
 
     [Header("Physics")]
+    public Quaternion originalRotation;
+    public Vector3 originalPosition;
     public Vector3 launchVector;
     public float launchForce;
     public float xForce;
@@ -21,6 +23,8 @@ public class MouseManager : MonoBehaviour
     private void Start()
     {
         //slimeRigidbody = GetComponent<Rigidbody>();
+        originalPosition = slimeTransform.position;
+        originalRotation = slimeTransform.rotation;
     }
 
     // Update is called once per frame
@@ -49,10 +53,20 @@ public class MouseManager : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {   
             slimeRigidbody.isKinematic = false;
-            launchVector = new Vector2(yForce,xForce);
-            slimeRigidbody.AddForce(launchVector);
+           // launchVector = new Vector3(xForce,yForce,zForce);
+           slimeRigidbody.AddForce(launchVector * 40,ForceMode.VelocityChange);
 
             print("Release");
         }
-    }
+
+        if (Input.GetMouseButtonDown(1)) 
+        {
+            slimeTransform.position = originalPosition;
+            slimeTransform.rotation = originalRotation;
+
+            slimeRigidbody.isKinematic = true;
+
+        }
+
+        }
 }
