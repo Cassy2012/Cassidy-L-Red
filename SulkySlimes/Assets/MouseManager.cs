@@ -46,6 +46,7 @@ public class MouseManager : MonoBehaviour
                 mouseDiffrence.y * 1.2f,
                 mouseDiffrence.y * 1.5f
                 );
+            slimeTransform.position = originalPosition - launchVector / 400;
             launchVector.Normalize();
         }
 
