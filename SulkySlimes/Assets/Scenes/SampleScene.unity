@@ -1115,7 +1115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693187029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60.848816, y: 51.449966, z: 114.64775}
+  m_LocalPosition: {x: 47.6, y: 51.449966, z: 114.64775}
   m_LocalScale: {x: 3.1887, y: 2.8578975, z: 2.8668454}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2413,7 +2413,7 @@ MonoBehaviour:
   originalRotation: {x: 0, y: 0, z: 0, w: 0}
   originalPosition: {x: 0, y: 0, z: 0}
   launchVector: {x: 0, y: 0, z: 0}
-  launchForce: 100
+  launchForce: 0
   xForce: 0
   yForce: 0
   slimeTransform: {fileID: 1627437409}
