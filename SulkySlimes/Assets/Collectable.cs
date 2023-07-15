@@ -34,16 +34,17 @@ public class Collectable : MonoBehaviour
 
             // Calculate the journey length.
             journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        curve.postWrapMode = WrapMode.PingPong;
         }
 
         // Move to the target end position.
         void Update()
         {
             // Distance moved equals elapsed time times speed..
-            float distCovered = (Time.time - startTime) * speed;
+            //float distCovered = (Time.time - startTime) * speed;
 
             // Fraction of journey completed equals current distance divided by total distance.
-            float fractionOfJourney = distCovered / journeyLength;
+            //float fractionOfJourney = distCovered / journeyLength;
 
         // Set our position as a fraction of the distance between the markers.
         //transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
@@ -52,5 +53,14 @@ public class Collectable : MonoBehaviour
         
          //transform.position = Vector3.Lerp(endMarker.position, startMarker.position, fractionOfJourney);
 
+    }
+
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        if(collider.tag == "Player")
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

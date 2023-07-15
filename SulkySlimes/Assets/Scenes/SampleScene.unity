@@ -261,7 +261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48657087}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 201.31, y: 6.16, z: 17.590004}
+  m_LocalPosition: {x: 204.2, y: 28.5, z: 69.51}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -784,7 +784,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360852845}
-  m_LocalRotation: {x: 0.0114639085, y: -0.002638903, z: 0.000030254238, w: 0.9999308}
+  m_LocalRotation: {x: 0.01099332, y: -0.0025305338, z: 0.000027820737, w: 0.9999364}
   m_LocalPosition: {x: 191.2, y: 8, z: -38.40003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -881,6 +881,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Throw
       objectReference: {fileID: 0}
+    - target: {fileID: 1576488453971893466, guid: a778b631c6253a04899cb31bad047c81, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 7029523610040634915, guid: a778b631c6253a04899cb31bad047c81, type: 3}
       propertyPath: m_Convex
       value: 1
@@ -915,7 +919,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532266043}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180.67, y: 6.82, z: 18}
+  m_LocalPosition: {x: 180.67, y: 28.5, z: 69.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1165,7 +1169,7 @@ GameObject:
   - component: {fileID: 693187034}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1178,8 +1182,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693187029}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 180.74557, y: 6.630001, z: 114.1634}
-  m_LocalScale: {x: 3.1887, y: 2.8578975, z: 2.8668454}
+  m_LocalPosition: {x: 183.1924, y: 19.6265, z: 69.1}
+  m_LocalScale: {x: 12.185, y: 11.653, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1193,7 +1197,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693187029}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -1262,7 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startMarker: {fileID: 532266044}
   endMarker: {fileID: 48657088}
-  speed: 5
+  speed: 1
   curve:
     serializedVersion: 2
     m_Curve:
@@ -1285,7 +1289,7 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
-    m_PostInfinity: 0
+    m_PostInfinity: 2
     m_RotationOrder: 4
   time: 0
 --- !u!1 &705507993
@@ -1406,7 +1410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871398206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 189.66, y: -45.877964, z: 268.91}
+  m_LocalPosition: {x: 189.66, y: -45.877964, z: 273.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1940,7 +1944,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1217678190}
-  m_LocalRotation: {x: 0.0114639085, y: -0.002638903, z: 0.000030254238, w: 0.9999308}
+  m_LocalRotation: {x: 0.01099332, y: -0.0025305338, z: 0.000027820737, w: 0.9999364}
   m_LocalPosition: {x: 191.2, y: 8, z: -38.40003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2562,7 +2566,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949644830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 203, y: 8.3633, z: 119.42}
+  m_LocalPosition: {x: 203, y: 8.3633, z: 125.7}
   m_LocalScale: {x: 25.296835, y: 5.283549, z: 43.17529}
   m_ConstrainProportionsScale: 0
   m_Children: []
