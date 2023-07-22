@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MouseManager : MonoBehaviour
 {
+
+    [Header("Lives")]
+    public livesManager livesManager;
+
+
+
     [Header("Mouse Info")]
     public Vector3 clickStartLocation;
 
@@ -69,5 +75,25 @@ public class MouseManager : MonoBehaviour
 
         }
 
+        if (slimeTransform.position.y < 4)
+        {
+            livesManager.RemoveLife();
         }
+
+        if(livesManager.lives < 0)
+        {
+            return;
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            clickStartLocation = Input.mousePosition;
+        }
+
+        if (Input.GetMouseButton(0))
+        {
+
+        }
+
+    }
 }
