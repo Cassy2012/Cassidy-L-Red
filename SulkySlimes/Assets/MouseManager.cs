@@ -75,24 +75,25 @@ public class MouseManager : MonoBehaviour
 
         }
 
-        if (slimeTransform.position.y < 4)
-        {
-            livesManager.RemoveLife();
-        }
+      //  if (slimeTransform.position.y < 4)
+      //  {
+          //  livesManager.RemoveLife();
+      //  }
 
-        if(livesManager.lives < 0)
+        if(livesManager.Lives < 0)
         {
             return;
         }
 
         if (Input.GetMouseButtonDown(0))
         {
-            clickStartLocation = Input.mousePosition;
+            clickStartLocation = Input.mousePosition; 
+            livesManager.RemoveLife();
         }
 
         if (Input.GetMouseButton(0))
         {
-
+            
         }
 
     }
