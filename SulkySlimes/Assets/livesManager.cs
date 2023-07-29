@@ -12,7 +12,10 @@ public class livesManager : MonoBehaviour
     {
 
         Lives -= 1;
-
+        if(Lives == -1)
+        {
+            SceneManager.LoadScene(0);
+        }
         hearts[Lives].SetActive(false);
         print("You lost a LifE! Lives: " + Lives);
         
@@ -29,9 +32,6 @@ public class livesManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Lives == -1)
-        {
-            SceneManager.LoadScene(0);
-        }
+    
     }
 }

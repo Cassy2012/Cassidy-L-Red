@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/SulkySlime.unity
+    guid: 20cef7d6bebc7a54186e46f178012555
+  - enabled: 1
     path: Assets/Scenes/SulkySlime1.unity
     guid: 5d846f41de8684643bca25cbcd3ae54d
   m_configObjects: {}
