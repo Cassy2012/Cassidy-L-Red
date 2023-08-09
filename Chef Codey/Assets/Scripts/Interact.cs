@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
+    public GameObject ToastSlice;
+    public GameObject Toast;
+    public Stove stove;
+
+    
     public string triggerName = "";
 
     public GameObject breadPrefab;
@@ -29,21 +34,42 @@ public class Interact : MonoBehaviour
             }
             if (triggerName == "Stove")
             {
-                print("Stove");
+
                 if (heldItemName == "breadSlice")
                 {
-                    print("Ready to toast");
+                    stove.ToastBread();
+                    PlaceHeldItem();
                 }
                 else
                 {
-                    print("Codey is empty Handed!");
+                    if (stove.cookedFood == "toast")
+                    {
+                        heldItem = Instantiate(breadPrefab, transform, false);
+                        heldItem.transform.localPosition = new Vector3(0, 2, 2);
+                        heldItemName = "toastSlice";
+                        stove.CleanStove();
+                    }
+                }
+            }
+
+
+            if (triggerName == "Receivers")
+            {
+                if(heldItemName == "toastSlice")
+                {
+                    PlaceHeldItem();
+                    GameObject.Find("Receivers/The Bread/ToastSlice").SetActive(true);
                 }
             }
         }
-
-        
     }
 
+
+    private void PlaceHeldItem()
+    {
+        Destroy(heldItem);
+        heldItemName = "";
+    }
 
     private void OnTriggerEnter(Collider other)
     {
