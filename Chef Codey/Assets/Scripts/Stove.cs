@@ -5,6 +5,7 @@ using UnityEngine;
 public class Stove : MonoBehaviour
 {
     public GameObject toast;
+    public GameObject FriedEgg;
 
     public string cookedFood = "";
 
@@ -13,6 +14,7 @@ public class Stove : MonoBehaviour
     void Start()
     {
         toast.SetActive(false);
+        FriedEgg.SetActive(false);
 
     }
 
@@ -34,5 +36,13 @@ public class Stove : MonoBehaviour
     {
         toast.SetActive(false);
         cookedFood = "";
+        FriedEgg.SetActive(false);
+        cookedFood = "";
+    }
+
+    public void FryEgg()
+    {
+        FriedEgg.SetActive(true);
+        cookedFood = "FriedEgg";
     }
 }

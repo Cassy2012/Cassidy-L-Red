@@ -12,6 +12,8 @@ public class Interact : MonoBehaviour
     public string triggerName = "";
 
     public GameObject breadPrefab;
+    public GameObject eggPrefab;
+    public GameObject FriedEggPrefab;
 
     public GameObject heldItem;
     public string heldItemName;
@@ -28,10 +30,17 @@ public class Interact : MonoBehaviour
         {
             if (triggerName == "Bread")
             {
-                heldItem = Instantiate(breadPrefab, transform, false);
-                heldItem.transform.localPosition = new Vector3(0, 2, 1);
-                heldItemName = "breadSlice";
+                PickUpItem(breadPrefab, "breadSlice");
+              
             }
+
+
+            if(triggerName == "eGG")
+            {
+                PickUpItem(eggPrefab, "egg");
+            }
+
+
             if (triggerName == "Stove")
             {
 
@@ -42,12 +51,29 @@ public class Interact : MonoBehaviour
                 }
                 else
                 {
-                    if (stove.cookedFood == "toast")
+                    if (heldItemName == "egg")
                     {
-                        heldItem = Instantiate(breadPrefab, transform, false);
-                        heldItem.transform.localPosition = new Vector3(0, 2, 2);
-                        heldItemName = "toastSlice";
-                        stove.CleanStove();
+                        stove.FryEgg();
+                        PlaceHeldItem();
+                    }
+
+
+                    else
+                    {
+
+                        if (stove.cookedFood == "FriedEgg")
+                        {
+                            
+                            PickUpItem(FriedEggPrefab, "FriedEgg");
+                            stove.CleanStove();
+                            heldItem.transform.localScale = new Vector3(4, 4, 7);
+                        }
+
+                        if (stove.cookedFood == "toast")
+                        {
+                            PickUpItem(breadPrefab, "toastSlice");
+                            stove.CleanStove();
+                        }
                     }
                 }
             }
@@ -59,6 +85,12 @@ public class Interact : MonoBehaviour
                 {
                     PlaceHeldItem();
                     GameObject.Find("Receivers/The Bread/ToastSlice").SetActive(true);
+                }
+
+                if(heldItemName == "FriedEgg")
+                {
+                    PlaceHeldItem();
+                    GameObject.Find("Receivers/The Bread/friedEgg").SetActive(true);
                 }
             }
         }
@@ -79,5 +111,13 @@ public class Interact : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         triggerName = "";
+    }
+
+
+    private void PickUpItem(GameObject itemPrefab, string itemName)
+    {
+        heldItem = Instantiate(itemPrefab, transform, false);
+        heldItem.transform.localPosition = new Vector3(0, 2, 2);
+        heldItemName = itemName;
     }
 }
