@@ -63,16 +63,33 @@ public class Interact : MonoBehaviour
 
                         if (stove.cookedFood == "FriedEgg")
                         {
+                            if (stove.isCooking == false)
+                            {
+                                PickUpItem(FriedEggPrefab, "FriedEgg");
+                                stove.CleanStove();
+                                heldItem.transform.localScale = new Vector3(4, 4, 7);
+                            }
+                            else
+                            {
+                                stove.Invoke("CompleteCooking", 6f);
+                                
+                            }
                             
-                            PickUpItem(FriedEggPrefab, "FriedEgg");
-                            stove.CleanStove();
-                            heldItem.transform.localScale = new Vector3(4, 4, 7);
                         }
 
                         if (stove.cookedFood == "toast")
                         {
-                            PickUpItem(breadPrefab, "toastSlice");
-                            stove.CleanStove();
+                            if(stove.isCooking == false)
+                            {    
+                                PickUpItem(breadPrefab, "toastSlice");
+                                stove.CleanStove();
+                            }
+                            else
+                            {
+                                stove.Invoke("CompleteCooking", 4f);
+                            }
+                            
+                            
                         }
                     }
                 }
