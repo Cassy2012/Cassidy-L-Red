@@ -14,6 +14,12 @@ public class Interact : MonoBehaviour
     public GameObject breadPrefab;
     public GameObject eggPrefab;
     public GameObject FriedEggPrefab;
+    public GameObject SteakPrefab;
+    public GameObject CookedSteakPrefab;
+    public GameObject BunPrefab;
+    public GameObject bUNPrefab;
+    public GameObject SausagePrefab;
+    public GameObject SAusagePrefab;
 
     public GameObject heldItem;
     public string heldItemName;
@@ -41,6 +47,23 @@ public class Interact : MonoBehaviour
             }
 
 
+            if(triggerName == "Steak")
+            {
+                PickUpItem(SteakPrefab, "Steak");
+            }
+
+            
+            if(triggerName == "Bun")
+            {
+                PickUpItem(BunPrefab, "Bun");
+            }
+
+            if(triggerName == "Sausage")
+            {
+                PickUpItem(SausagePrefab, "Sausage");
+            }
+
+
             if (triggerName == "Stove")
             {
 
@@ -56,46 +79,131 @@ public class Interact : MonoBehaviour
                         stove.FryEgg();
                         PlaceHeldItem();
                     }
-
-
                     else
                     {
-
-                        if (stove.cookedFood == "FriedEgg")
+                        if (heldItemName == "Steak")
                         {
-                            if (stove.isCooking == false)
-                            {
-                                PickUpItem(FriedEggPrefab, "FriedEgg");
-                                stove.CleanStove();
-                                heldItem.transform.localScale = new Vector3(4, 4, 7);
-                            }
-                            else
-                            {
-                                stove.Invoke("CompleteCooking", 6f);
-                                
-                            }
-                            
+                            stove.Steaks();
+                            PlaceHeldItem();
                         }
-
-                        if (stove.cookedFood == "toast")
+                        else
                         {
-                            if(stove.isCooking == false)
-                            {    
-                                PickUpItem(breadPrefab, "toastSlice");
-                                stove.CleanStove();
+                            if(heldItemName == "Sausage")
+                            {
+                                stove.SausaGE();
+                                PlaceHeldItem();
                             }
                             else
                             {
-                                stove.Invoke("CompleteCooking", 4f);
+
+                            
+
+                            if (heldItemName == "Bun")
+                            {
+                                stove.BUN();
+                                PlaceHeldItem();
                             }
+                            else
+                            {
+                                if(stove.cookedFood == "sAusage")
+                                {
+                                    if(stove.isCooking == false)
+                                    {
+                                        PickUpItem(SAusagePrefab, "SausagE");
+                                        stove.CleanStove();
+                                        heldItem.transform.localScale = new Vector3(4, 4, 7);
+                                    }
+                                        else
+                                        {
+                                            stove.Invoke("CompleteCooking", 2f);
+                                        }
+                                }
+
                             
-                            
+
+
+
+
+                            else
+                            {
+                                        if (stove.cookedFood == "bUN")
+                                        {
+                                            if (stove.isCooking == false)
+                                            {
+                                                PickUpItem(bUNPrefab, "BuN");
+                                                stove.CleanStove();
+                                                heldItem.transform.localScale = new Vector3(4, 4, 7);
+                                            }
+                                            else
+                                            {
+                                                stove.Invoke("CompleteCooking", 2f);
+                                            }
+                                        }
+
+
+
+
+
+                                        else
+                                        {
+                                            if (stove.cookedFood == "CookedSteak")
+                                            {
+                                                if (stove.isCooking == false)
+                                                {
+                                                    PickUpItem(CookedSteakPrefab, "SteAk");
+                                                    stove.CleanStove();
+                                                    heldItem.transform.localScale = new Vector3(4, 4, 7);
+                                                }
+                                                else
+                                                {
+                                                    stove.Invoke("CompleteCooking", 3f);
+                                                }
+                                            }
+
+
+
+
+                                            else
+                                            {
+
+                                                if (stove.cookedFood == "FriedEgg")
+                                                {
+                                                    if (stove.isCooking == false)
+                                                    {
+                                                        PickUpItem(FriedEggPrefab, "FriedEgg");
+                                                        stove.CleanStove();
+                                                        heldItem.transform.localScale = new Vector3(4, 4, 7);
+                                                    }
+                                                    else
+                                                    {
+                                                        stove.Invoke("CompleteCooking", 6f);
+
+                                                    }
+
+
+                                                }
+
+                                                if (stove.cookedFood == "toast")
+                                                {
+                                                    if (stove.isCooking == false)
+                                                    {
+                                                        PickUpItem(breadPrefab, "toastSlice");
+                                                        stove.CleanStove();
+                                                    }
+                                                    else
+                                                    {
+                                                        stove.Invoke("CompleteCooking", 4f);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
             }
-
-
             if (triggerName == "Receivers")
             {
                 if(heldItemName == "toastSlice")
@@ -109,6 +217,26 @@ public class Interact : MonoBehaviour
                     PlaceHeldItem();
                     GameObject.Find("Receivers/The Bread/friedEgg").SetActive(true);
                 }
+
+
+                if(heldItemName == "SteAk")
+                {
+                    PlaceHeldItem();
+                    GameObject.Find("Receivers/The Steak/SteaK").SetActive(true);
+                }
+
+                if(heldItemName == "BuN")
+                {
+                    PlaceHeldItem();
+                    GameObject.Find("Receivers/The Bun/Bun9").SetActive(true);
+                }
+
+                if(heldItemName == "SausagE")
+                {
+                    PlaceHeldItem();
+                    GameObject.Find("Receivers/The Bun/sausage9").SetActive(true);
+                }
+
             }
         }
     }

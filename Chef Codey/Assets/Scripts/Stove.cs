@@ -8,6 +8,9 @@ public class Stove : MonoBehaviour
     [Header("Prefabs")]
     public GameObject toast;
     public GameObject FriedEgg;
+    public GameObject SteAk;
+    public GameObject BuN;
+    public GameObject SausagE;
 
     [Header("Inventory")]
     public string cookedFood = "";
@@ -26,6 +29,13 @@ public class Stove : MonoBehaviour
         Smoke.Stop();
 
         FriedEgg.SetActive(false);
+
+        SteAk.SetActive(false);
+
+        BuN.SetActive(false);
+
+        SausagE.SetActive(false);
+
 
     }
 
@@ -52,6 +62,12 @@ public class Stove : MonoBehaviour
         cookedFood = "";
         FriedEgg.SetActive(false);
         cookedFood = "";
+        SteAk.SetActive(false);
+        cookedFood = "";
+        BuN.SetActive(false);
+        cookedFood = "";
+        SausagE.SetActive(false);
+        cookedFood = "";
         Smoke.Stop();
         Complete.Stop();
 
@@ -73,5 +89,31 @@ public class Stove : MonoBehaviour
         isCooking = false;
         Smoke.Stop();
         Complete.Play();
+    }
+
+    public void Steaks()
+    {
+        isCooking = true;
+        Smoke.Play();
+      SteAk.SetActive(true);
+        cookedFood = "CookedSteak";
+    }
+
+    public void BUN()
+    {
+        isCooking = true;
+        Smoke.Play();
+        BuN.SetActive(true);
+        cookedFood = "bUN";
+       
+    }
+
+
+    public void SausaGE()
+    {
+        isCooking = true;
+        Smoke.Play();
+        SausagE.SetActive(true);
+        cookedFood = "sAusage";
     }
 }
