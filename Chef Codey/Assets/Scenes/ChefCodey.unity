@@ -664,6 +664,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011356331470, guid: 00a1a863a89404d46a228ffab189f332, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 4000010950447518, guid: 00a1a863a89404d46a228ffab189f332, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -821,7 +825,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 80
+  m_Text: 120
 --- !u!222 &287066268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -885,7 +889,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 1685581446}
+  m_LookAt: {fileID: 685884862}
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 60
@@ -912,15 +916,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294791912}
-  m_LocalRotation: {x: 0.5147926, y: -0.11625149, z: 0.070701756, w: 0.8464487}
-  m_LocalPosition: {x: 7.7217584, y: 15.34, z: -40.69}
+  m_LocalRotation: {x: 0.0104028145, y: 0.1850097, z: -0.0019585444, w: 0.9826797}
+  m_LocalPosition: {x: 2.4, y: 7.1, z: -44.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 494763250}
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 26.936, y: -0.468, z: -0.316}
+  m_LocalEulerAnglesHint: {x: 13.146, y: 20.221, z: 0.13}
 --- !u!1 &305544902 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011356331470, guid: 00a1a863a89404d46a228ffab189f332, type: 3}
@@ -1014,6 +1018,10 @@ PrefabInstance:
     - target: {fileID: 1000010864150500, guid: 07c1ce2b91eb18f4c83d7d36268a0341, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010864150500, guid: 07c1ce2b91eb18f4c83d7d36268a0341, type: 3}
+      propertyPath: m_TagString
+      value: Food
       objectReference: {fileID: 0}
     - target: {fileID: 4000010663249712, guid: 07c1ce2b91eb18f4c83d7d36268a0341, type: 3}
       propertyPath: m_RootOrder
@@ -1540,7 +1548,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LapTime: {fileID: 287066267}
-  totalLapTime: 80
+  totalLapTime: 120
 --- !u!4 &477343724
 Transform:
   m_ObjectHideFlags: 0
@@ -1741,7 +1749,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 1
-  m_FollowOffset: {x: 0, y: 0, z: -10}
+  m_FollowOffset: {x: 9.138088, y: 0, z: 8.623442}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -7150,6 +7158,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1000012081886716, guid: 0b2c2c6617d3fb54ab69e7ff4da40867, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     - target: {fileID: 4000012043725196, guid: 0b2c2c6617d3fb54ab69e7ff4da40867, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -7544,8 +7556,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: -0.11543559, y: -0.83304495, z: 0.50664073, w: -0.1898052}
-  m_LocalPosition: {x: -2.5448976, y: 12.301895, z: 5.82162}
+  m_LocalRotation: {x: 0.0010416042, y: -0.9950913, z: 0.010534206, w: 0.09839288}
+  m_LocalPosition: {x: 1.6795063, y: 5.5298505, z: 10.116268}
   m_LocalScale: {x: 0.9252166, y: 0.9428752, z: 0.85116947}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8064,6 +8076,10 @@ PrefabInstance:
     - target: {fileID: 1000013652843464, guid: 43d9530894ffb9e468b06ef86dc4efa8, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013652843464, guid: 43d9530894ffb9e468b06ef86dc4efa8, type: 3}
+      propertyPath: m_TagString
+      value: Food
       objectReference: {fileID: 0}
     - target: {fileID: 4000011416016934, guid: 43d9530894ffb9e468b06ef86dc4efa8, type: 3}
       propertyPath: m_RootOrder
@@ -9329,6 +9345,10 @@ PrefabInstance:
     - target: {fileID: 1000012343480272, guid: 9425302b7c44a194bb8782c22588bfe2, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000012343480272, guid: 9425302b7c44a194bb8782c22588bfe2, type: 3}
+      propertyPath: m_TagString
+      value: Food
       objectReference: {fileID: 0}
     - target: {fileID: 4000012278945844, guid: 9425302b7c44a194bb8782c22588bfe2, type: 3}
       propertyPath: m_RootOrder
@@ -15489,6 +15509,8 @@ MonoBehaviour:
   ToastSlice: {fileID: 305544902}
   Toast: {fileID: 733683143}
   stove: {fileID: 201547954}
+  Reiceivers: {fileID: 0}
+  Counter: 0
   triggerName: 
   breadPrefab: {fileID: 553037587}
   eggPrefab: {fileID: 1921617131}

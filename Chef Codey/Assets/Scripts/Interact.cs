@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interact : MonoBehaviour
 {
     public GameObject ToastSlice;
     public GameObject Toast;
     public Stove stove;
+    public GameObject Reiceivers;
+
+    public int Counter;
 
     
     public string triggerName = "";
@@ -204,12 +208,15 @@ public class Interact : MonoBehaviour
                     }
                 }
             }
+
             if (triggerName == "Receivers")
             {
                 if(heldItemName == "toastSlice")
                 {
                     PlaceHeldItem();
                     GameObject.Find("Receivers/The Bread/ToastSlice").SetActive(true);
+                    
+
                 }
 
                 if(heldItemName == "FriedEgg")
@@ -234,7 +241,7 @@ public class Interact : MonoBehaviour
                 if(heldItemName == "SausagE")
                 {
                     PlaceHeldItem();
-                    GameObject.Find("Receivers/The Bun/sausage9").SetActive(true);
+                    GameObject.Find("Receivers/The Bun/Sausage9").SetActive(true);
                 }
 
             }
@@ -246,6 +253,11 @@ public class Interact : MonoBehaviour
     {
         Destroy(heldItem);
         heldItemName = "";
+        Counter += 1;
+        if (Counter == 10)
+        {
+            SceneManager.LoadScene(1);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
